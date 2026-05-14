@@ -1,0 +1,212 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: 'Satoshi', sans-serif; 
+    line-height: 100%;
+}
+
+
+/* Общие настройки */
+.container {
+    max-width: 1280px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+.container_header {
+    max-width: 1386px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* Верхняя панель */
+.header-top {
+    justify-content: space-between; /* Расставляет поиск, лого и иконки по краям */
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    margin: 3px;
+    color: #22202E;
+    font-family: 'Clash Display', sans-serif;
+    text-decoration: none;
+}
+
+.user-links a {
+    margin-left: 16px;
+    text-decoration: none;
+}
+
+/* Линия-разделитель (вместо картинки palka_v_header лучше использовать border или hr) */
+.line {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Навигация */
+.nav {
+    justify-content: center; /* Центрирует все ссылки */
+    gap: 44px;               /* Расстояние между ссылками */
+    padding: 20px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #726E8D;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #2A254B;
+}
+
+
+
+Main */
+/* Внешние отступы всей секции сверху и снизу (как вы просили) */
+.preview {
+    padding: 60px 0; /* 60px сверху и снизу отделяют баннер от меню и контента */
+    box-sizing: border-box;
+}
+
+/* Главное фиолетовое поле баннера */
+.back_purple {
+    display: flex;
+    background-color: #2A254B;
+    color: white;
+    min-height: 444px; /* Базовая высота блока на десктопе */
+    width: 100%;
+}
+
+/* Левая половина с контентом */
+.preview_info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Расталкивает верхний блок и нижний текст к краям */
+    align-items: flex-start;
+    
+    /* ИСПРАВЛЕНИЕ: Ровно 60px сверху и снизу, 80px по бокам */
+    padding: 60px 80px; 
+    box-sizing: border-box;
+}
+
+/* Верхняя часть (Заголовок + кнопка) */
+.preview_top {
+    max-width: 513px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+
+/* Заголовок h2 внутри контейнера */
+h2 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 32px;
+    line-height: 140%;
+    margin: 0;
+}
+
+/* Кнопка */
+.View {
+    background-color: rgba(249, 249, 249, 0.15);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-family: 'Satoshi', sans-serif;
+
+}
+
+.View:hover {
+    background-color: rgba(249, 249, 249, 0.3);
+}
+
+/* ИСПРАВЛЕНИЕ: Точные размеры текстового контейнера из Figma */
+.preview_subtext {
+    max-width: 602px;      /* Жесткая ширина по макету */
+    min-height: 81px;      /* Высота контейнера по макету */
+    font-size: 18px;
+    line-height: 150%;     /* Позволяет тексту идеально занять 81px высоты */
+    color: #F9F9F9;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Картинка */
+.chair_right {
+    width: 40%;
+    object-fit: cover;
+    display: block;
+}
+
+h3 {
+    font-family: 'Clash Display', sans-serif;
+    line-height: 140%;
+    font-size: 24px;
+    color: #2A254B;
+}
+h4 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    color: #2A254B;
+}
+
+/* Стилизация заголовка секции */
+.differents h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #2A254B;
+    padding-top: 60px;
+    margin: 51px;
+    line-height: 140%; /* Делает текст более читаемым */
+}
+
+/* Родоначальник для карточек */
+.parts_differents {
+    display: flex;
+    justify-content: space-between; /* Распределяет элементы по краям */
+    gap: 91px;                      /* Задает фиксированный отступ между ними */
+    flex-wrap: nowrap;              /* СТРОГО ЗАПРЕЩАЕТ перенос элементов на новую строку */
+    width: 100%;                    /* Растягивается на всю ширину контейнера */
+}
+
+/* Сами карточки преимуществ */
+.different_item {
+    flex: 1;                        /* Заставляет все 4 карточки быть строго одинаковой ширины */
+    min-width: 0;                   /* Сбрасывает дефолтную минимальную ширину flex-элементов */
+}
+
+/* Стили элементов внутри карточки */
+.different_item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.different_item h4 {
+    font-size: 20px;
+    color: #2A254B;
+    margin-bottom: 8px;
+    line-height: 140%;
+}
+
+.different_item p {
+    font-size: 16px;
+    color: #2A254B;
+    line-height: 150%;
+}
